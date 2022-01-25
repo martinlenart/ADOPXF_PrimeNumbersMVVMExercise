@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeNumbers.Views.AboutPage"
+             Title="About Primes">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Primes" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="An app in Xamarin.Forms to demonstrate Services, Streams, MVVM and DI" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="We create a simple app using a Prime number calculation service. Primes are calculated in number sequences of 1 000 000, a so called batch. Batches are shown in a ListView and all the primes in a batch can be stored onto disk." 
+               FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="The application is first using simple View architecture and then step-by-step refracturing into MVVM architecture is done." 
+               FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Created by Martin Lenart"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+
+</ContentPage>

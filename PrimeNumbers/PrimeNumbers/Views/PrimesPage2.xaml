@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeNumbers.Views.PrimesPage2"
+             xmlns:models="clr-namespace:PrimeNumbers.Models"
+             Padding="20"
+             Title="Find Primenumbers">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Label BindingContext="{x:Static models:PrimeBatch.BatchSize}" 
+                       Text ="{Binding Path=., StringFormat='Number of {0:N0} batches:'}" 
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+                <Entry x:Name="enNrBatches" Placeholder="" HorizontalOptions="Start" />
+                <Button Text="Get primes" Clicked="Button_Clicked" HorizontalOptions="Start" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                <ListView x:Name="lvPrimes" ItemsSource="{Binding Primes}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding .}" Detail="  " />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
